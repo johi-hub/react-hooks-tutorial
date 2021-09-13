@@ -1,26 +1,24 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 
 const App = () => {
-  const [count, setCount] = useState(10);
-  const [count2, setCount2] = useState(20);
+	const [email, setEmail] = useState("");
+	const [password, setPassword] = useState("");
 
-  return (
-  <div>
-    <button onClick={() => {
-      setCount(c => c + 1);
-      setCount2(c => c + 1);
-      }}
-    >
-      +
-    </button> 
-      <div>
-      count: 1 {count}
-    </div>
-    <div>
-      count 2: {count2}
-    </div>
-  </div>
-  );
+	return (
+		<div>
+			<input
+				name="email"
+				value={email}
+				onChange={(e) => setEmail(e.target.value)}
+			/>
+			<input
+				type="password"
+				value={password}
+				name="password"
+				onChange={(e) => setPassword(e.target.value)}
+			/>
+		</div>
+	);
 };
 
 export default App;
