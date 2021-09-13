@@ -1,5 +1,6 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useForm } from "./useForm";
+import { Hello } from "./Hello";
 
 const App = () => {
 	const [values, handleChange] = useForm({
@@ -8,17 +9,20 @@ const App = () => {
 		firstName: "",
 	});
 
+	const [showHello, setShowHello] = useState(true);
+
 	useEffect(() => {
 		console.log("render");
 
-		//'cleanup' function
 		return () => {
 			console.log("unmount");
 		};
-	}, []);
+	}, [values.email]);
 
 	return (
 		<div>
+			<button onClick={() => setShowHello(!showHello)}>toggle</button>
+			{showHello && <Hello />}
 			<input name="email" value={values.email} onChange={handleChange} />
 			<input
 				name="firstName"
