@@ -5,7 +5,7 @@ const App = () => {
 
   return (
   <div>
-    <button onClick={() => setCount(currentCount => currentCount + 1)}>
+    <button onClick={() => setCount(currentState => ({ count: currentState.count + 1}))}>
       +
       </button>
       <div>
