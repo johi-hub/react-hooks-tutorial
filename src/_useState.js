@@ -1,7 +1,7 @@
 import React from "react";
-import { useForm } from "./useForm";
+import { useForm } from "./_useForm";
 
-const App = () => {
+const _useState = () => {
 	const [values, handleChange] = useForm({ email: "", password: "" });
 
 	return (
@@ -17,4 +17,4 @@ const App = () => {
 	);
 };
 
-export default App;
+export default _useState;

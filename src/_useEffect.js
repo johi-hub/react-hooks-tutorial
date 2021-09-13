@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useForm } from "./_useForm";
 import { useFetch } from "./_useFetch";
 
-const App = () => {
+const _useEffect = () => {
 	const [values, handleChange] = useForm({
 		email: "",
 		password: "",
@@ -40,4 +40,4 @@ const App = () => {
 	);
 };
 
-export default App;
+export default _useEffect;
