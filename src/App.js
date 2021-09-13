@@ -12,10 +12,13 @@ const App = () => {
 	const [showHello, setShowHello] = useState(true);
 
 	useEffect(() => {
-		console.log("render");
+		const onMouseMove = (e) => {
+			console.log(e);
+		};
+		window.addEventListener("mousemove");
 
 		return () => {
-			console.log("unmount");
+			window.removeEventListener("mousemove", onMouseMove);
 		};
 	}, [values.email]);
 
