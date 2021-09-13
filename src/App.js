@@ -9,23 +9,31 @@ const App = () => {
 		firstName: "",
 	});
 
-	const [showHello, setShowHello] = useState(true);
+	// const [showHello, setShowHello] = useState(true);
+
+	// useEffect(() => {
+	// 	const onMouseMove = (e) => {
+	// 		console.log(e);
+	// 	};
+	// 	window.addEventListener("mousemove");
+
+	// 	return () => {
+	// 		window.removeEventListener("mousemove", onMouseMove);
+	// 	};
+	// }, []);
 
 	useEffect(() => {
-		const onMouseMove = (e) => {
-			console.log(e);
-		};
-		window.addEventListener("mousemove");
+		console.log("mount1");
+	}, []);
 
-		return () => {
-			window.removeEventListener("mousemove", onMouseMove);
-		};
-	}, [values.email]);
+	useEffect(() => {
+		console.log("mount1");
+	}, []);
 
 	return (
 		<div>
-			<button onClick={() => setShowHello(!showHello)}>toggle</button>
-			{showHello && <Hello />}
+			{/* <button onClick={() => setShowHello(!showHello)}>toggle</button>
+			{showHello && <Hello />} */}
 			<input name="email" value={values.email} onChange={handleChange} />
 			<input
 				name="firstName"
