@@ -1,12 +1,16 @@
 import React, {useState} from "react";
 
-function expensiveInitialState () {
-  return 10;
-}
-
 const App = () => {
-  useState(() => expensiveInitialState());
-  return <div>hey</div>;
-}
+  const [count, setCount] = useState(10);
+
+  return (
+  <div>
+    <button onClick={() => setCount(count + 1)}>+</button>
+    <div>
+      {count}
+    </div>
+  </div>
+  );
+};
 
 export default App;
