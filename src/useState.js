@@ -1,12 +1,8 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useForm } from "./useForm";
 
 const App = () => {
 	const [values, handleChange] = useForm({ email: "", password: "" });
-
-	useEffect(() => {
-		console.log("render");
-	});
 
 	return (
 		<div>
