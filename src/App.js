@@ -22,13 +22,13 @@ const App = () => {
 	// 	};
 	// }, []);
 
-	useEffect(() => {
-		console.log("mount1");
-	}, []);
+	// useEffect(() => {
+	// 	console.log("mount1");
+	// }, []);
 
-	useEffect(() => {
-		console.log("mount1");
-	}, []);
+	// useEffect(() => {
+	// 	console.log("mount1");
+	// }, []);
 
 	return (
 		<div>
